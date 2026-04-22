@@ -1,0 +1,439 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+}
+
+/* Header */
+.bb-header {
+  background: maroon;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.bb-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.bb-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Admin Controls */
+.admin-controls {
+  margin-top: 15px;
+}
+
+.admin-controls button {
+  background: white;
+  color: maroon;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+  transition: 0.3s;
+  
+}
+
+.admin-controls button:hover {
+  background: #ffcccb;
+}
+
+.login-form {
+  margin-top: 10px;
+}
+
+.login-form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+}
+
+.login-form small {
+  display: block;
+  margin-top: 5px;
+  color: #ffcccb;
+}
+
+.admin-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Add Blood Form */
+.add-blood-form {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.add-blood-form h3 {
+  color: maroon;
+  margin-bottom: 15px;
+}
+
+.add-blood-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-blood-form button {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Blood Container */
+.blood-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blood-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.blood-card:hover {
+  transform: translateY(-5px);
+}
+
+.blood-group {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: maroon;
+  margin-bottom: 10px;
+}
+
+.status {
+  margin: 10px 0;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.available { background: #d4edda; color: #155724; }
+.out { background: #fff3cd; color: #856404; }
+.unavailable { background: #f8d7da; color: #721c24; }
+
+.units {
+  margin: 10px 0;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Admin Actions */
+.admin-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.admin-actions button {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-actions button:hover {
+  background: #a00000;
+}
+
+.request-btn {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.request-btn:hover {
+  background: #a00000;
+}
+
+/* Request Form */
+.request-form {
+  background:white;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-bottom: 10px solid maroon;
+  
+}
+
+.request-form h2 {
+  color: maroon;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.request-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.request-form button {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.request-form button:hover {
+  background: #a00000;
+}
+
+/* Footer */
+footer {
+  background: #1b1b1b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blood-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 15px;
+  }
+  
+  .admin-buttons {
+    flex-direction: column;
+  }
+  
+  .add-blood-form {
+    margin: 15px;
+  }
+  
+  .request-form {
+    margin: 15px;
+    padding: 20px;
+  }
+}
+/* Admin Requests Panel */
+.admin-requests-panel {
+  background: white;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 800px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.admin-requests-panel h2 {
+  color: maroon;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.no-requests {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-style: italic;
+}
+
+.requests-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.request-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 5px solid maroon;
+  transition: transform 0.2s;
+}
+
+.request-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.request-blood-group {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: maroon;
+  background: #ffebee;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.request-status {
+  background: #ffc107;
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.request-details {
+  margin: 15px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.request-details p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.request-details strong {
+  color: maroon;
+}
+
+.request-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.approve-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.approve-btn:hover {
+  background: #218838;
+}
+
+.reject-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.reject-btn:hover {
+  background: #c82333;
+}
+
+/* Responsive for requests */
+@media (max-width: 768px) {
+  .admin-requests-panel {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .request-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .request-actions {
+    flex-direction: column;
+  }
+  
+  .approve-btn, .reject-btn {
+    width: 100%;
+  }
+}
+
+
+.card-purple {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  color: white;
+}
+
+.card-pink {
+  background: linear-gradient(135deg, #fb7185, #be123c);
+  color: white;
+}
+
+.card-red {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: white;
+}
+
+.card-lab {
+  background: linear-gradient(135deg, #34d399, #059669);
+  color: white;
+}

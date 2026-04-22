@@ -1,0 +1,224 @@
+/* GeminiChatbot.css */
+
+/* Floating Button Container */
+.chatbot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Round Toggle Button */
+.chatbot-toggle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #2563eb; /* Blue color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.chatbot-toggle-btn:hover {
+  transform: scale(1.1);
+  background-color: #1d4ed8;
+}
+
+/* Main Chat Window */
+.chatbot-window {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+  border: 1px solid #e5e7eb;
+}
+
+/* Header */
+.chatbot-header {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.online-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #4ade80;
+  border-radius: 50%;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.close-btn:hover { opacity: 1; }
+
+/* Messages Area */
+.chatbot-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Chat Bubbles */
+.message-row {
+  display: flex;
+  width: 100%;
+}
+
+.user-row { justify-content: flex-end; }
+.bot-row { justify-content: flex-start; }
+
+.bubble {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user-bubble {
+  background-color: #2563eb;
+  color: white;
+  border-top-right-radius: 0;
+}
+
+.bot-bubble {
+  background-color: white;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-top-left-radius: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.typing-indicator {
+  font-size: 12px;
+  color: red;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+/* Input Area */
+.chatbot-input-area {
+  padding: 10px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  border-radius: 25px;
+  padding: 5px 15px;
+  gap: 10px;
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  background: whitesmoke;
+  padding: 10px 0;
+  outline: none;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.icon-btn:hover { color: #2563eb; }
+.icon-btn.active { color: #ef4444; animation: pulse 1.5s infinite; }
+.icon-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* GeminiChatbot.css mein ye changes add karein */
+
+.typing-indicator {
+  font-size: 14px;
+  color: #6b7280;
+  margin-left: 10px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.typing-indicator span {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.send-btn {
+  color: #2563eb;
+}
+
+.send-btn:hover {
+  color: #1d4ed8;
+}
+
+.send-btn:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .chatbot-window {
+    width: 300px;
+    height: 450px;
+    right: 10px;
+    bottom: 10px;
+  }
+}

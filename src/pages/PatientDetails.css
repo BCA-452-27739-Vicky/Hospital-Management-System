@@ -1,0 +1,87 @@
+.admission-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.admission-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.admission-card input, .admission-card select, .admission-card textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+.admission-card input:focus {
+  border-color: #00c6ff;
+}
+
+.form-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00c6ff;
+}
+
+.btn-admit {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+  background: linear-gradient(135deg, #00f260, #0575E6); /* Greenish-blue for success */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-admit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 242, 96, 0.3);
+}
+
+.btn-back {
+  width: 100%;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
